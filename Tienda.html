@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Dreams - Tienda</title>
+    <link rel="stylesheet" href="Tienda.css">
+    <link rel="icon" href="LogoByN3.png" />
+</head>
+<body>
+    <header>
+        <div class="container">
+           <p class="logo"> <img src="media/logo bn.png" style="width: 178px; height: 69px;"></p>
+           <nav>
+            <a href="Inicio.html">Inicio</a>
+            <a href="proyectos.html">Proyecto</a>
+            <a href="Sobre Nos.html">Sobre Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+           </nav>
+        </div>
+    </header>
+    <section class="store">
+        <div class="store-container">
+
+            <div class="left-panel">
+
+                <div class="logo">
+                    <img src="media/pixil-frame-0 (3).png" alt="Imagen" width="400" height="400"  aline="center">
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <h1>Pixel Dreams</h1>
+                <p>Peluches, Llaveros, Cuadernos, Camisas & más</p>
+
+                <div class="products">
+                    <div class="product"><img src="media/cremento.png" alt="Producto 1"></div>
+                    <div class="product"><img src="media/Camisa Negra1.png" alt="Producto 2"></div>
+                    <div class="product"><img src="media/peluche lunaria.png" alt="Producto 3"></div>
+                    <div class="product"><img src="media/Llave ecos.png" alt="Producto 4"></div>
+                    <div class="product"><img src="media/cuaderno.png" alt="Producto 5"></div>
+                    <div class="product"><img src="media/camisa 1.png" alt="Producto 6"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Sin stock :( </p>
+            <button id="closeModal">Entendido</button>
+        </div>
+    </div>
+</div> 
+
+<script>
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('.product img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+</script>
+
+
+    <section id="Redes">
+        <div class="container">
+            <a href="https://www.instagram.com/pixeldreams.sv/"><img src="media/Instagram.png" alt="Instagram" width="36" height="36"></a>
+            <a href="https://x.com/PixelDream67"><img src="media/X.png" alt="X" width="36" height="36"></a>
+            <a href="https://www.tiktok.com/@pixeldreams67._"><img src="media/tiktok.png" alt="tiktok" width="36" height="36"></a>
+        </div>
+    </section>
+
+    <footer>Derechos de autor © 2025. Pixel Dreams SV</footer>
+</body>
+</html>
+
+
+

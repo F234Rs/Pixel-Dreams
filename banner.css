@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background: radial-gradient(circle at center, #0b0024 40%, #2d006b 100%);
+    color: #FFD700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner {
+    position: relative;
+    width: 480px;
+    height: 820px;
+    background-color: rgba(15, 0, 40, 0.92);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.15);
+    text-align: center;
+    overflow: hidden;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+/* ✨ Estrellas decorativas */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/tiny-stars.png");
+    opacity: 0.3;
+    animation: twinkle 6s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 0.5; }
+}
+
+/* 🌙 Luna pixelada */
+.moon {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle at 30% 30%, #FFFACD, #FFD700 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 8px rgba(255, 255, 200, 0.7);
+    z-index: 0;
+}
+
+/* Contenido principal */
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+}
+
+h1 {
+    font-size: 1.9em;
+    color: #FFD700;
+    text-shadow: 0 0 12px #FFD700, 0 0 30px #FF6C00;
+    animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 12px #FFD700; }
+    to { text-shadow: 0 0 25px #FF6C00; }
+}
+
+h2 {
+    font-size: 1em;
+    color: #FF9E00;
+    margin: 10px 0 20px 0;
+    text-shadow: 0 0 10px #FF9E00;
+}
+
+.description {
+    font-size: 0.8em;
+    color: #E5E5F0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.product {
+    width: 90px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 35px 10px rgba(0, 191, 255, 0.7);
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #FFD700;
+    margin-bottom: 25px;
+}
+
+.socials img {
+    width: 38px;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+}
+
+.socials img:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+}
+
+footer {
+    font-size: 0.7em;
+    color: #E5E5F0;
+    margin-top: 15px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
